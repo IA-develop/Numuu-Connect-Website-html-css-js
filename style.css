@@ -36,12 +36,13 @@ nav, .nav-links {
 nav {
     justify-content: space-around;
     align-items: center;
-    height: 13vh;
+    height: 10vh;
     position: fixed;
     top: 0;
     width: 100%;
     background-color: white;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links {
@@ -63,11 +64,23 @@ a:hover {
 }
 
 .logo {
-    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    padding: 0 15px; 
+
+    padding-right: 300px;
+    margin-left: -30px;
+}
+
+.logo img {
+    height: 10rem; 
+    width: auto; 
 }
 
 .logo:hover {
-    cursor: default;
+    cursor: pointer;
 }
 
 /* HAMBURGER MENU */
@@ -148,7 +161,7 @@ a:hover {
 /* SECTIONS */
 
 section {
-    padding-top: 4vh;
+    padding-top: 15vh;
     height: 96vh;
     margin: 0 0rem;
     box-sizing: border-box;
@@ -164,13 +177,13 @@ section {
 #profile {
     display: flex;
     justify-content: center;
-    margin-top: 13vh;
+    margin-top: 10vh;
     gap: 5rem;
     height: 80vh;
-    background-image: url('./assets/Background.png'); /* Replace with your image URL */
-    background-size: cover; /* Make sure the image covers the entire section */
-    background-position: center; /* Center the background image */
-    background-attachment: fixed; /* This makes the background stay in place */
+    background-image: url('./assets/Background.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
     color: white;
     flex-direction: column;
     align-items: center;
@@ -224,8 +237,6 @@ section {
     margin-top: 7vh;
 }
 
-/* BUTTONS */
-
 /* ABOUT SECTION */   
 
 #about {
@@ -236,16 +247,13 @@ section {
 .about-details-container {
     justify-content: center;
     flex-direction: column;
+    display: flex;
 }
 
 .text-container {
     text-align: center;
 }
-
-.about-containers, .about-details-container {
-    display: flex;
-}
-
+ 
 .about-pic {
     border-radius: 1rem;
 }
@@ -281,9 +289,9 @@ section {
     margin: auto 0;
 }
 
-/* EXPERIENCE SECTION */
+/* TESTIMONIALS SECTION */
 
-#loremipsum {
+#Testimonials {
     position: relative;
 }
 
@@ -298,26 +306,33 @@ section {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
-.article-container {
-    display: flex;
-    text-align: initial;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 2.5rem;
-    justify-content: space-around;
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+    justify-items: center;
+    max-width: 3000px;
+    margin-top: 3rem;
 }
 
-article {
-    display: flex;
-    width: 10rem;
-    justify-content: space-around;
-    gap: 0.5rem;
+.testimonial-box {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 750px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
-article .icon {
-    cursor: default
+.testimonial-box p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 /* TESTIMONIALS SECTION */
@@ -330,7 +345,7 @@ article .icon {
     flex-direction: column;
     height: 70vh;
 }
-
+  
 .contact-info-upper-container {
     display: flex;
     justify-content: center;
@@ -341,7 +356,7 @@ article .icon {
     margin: 2rem auto;
     padding: 0.5rem;
 }
-
+  
 .contact-info-container {
     display: flex;
     align-items: center;
@@ -349,15 +364,26 @@ article .icon {
     gap: 0.5rem;
     margin: 1rem;
 }
-
+  
 .contact-info-container p {
     font-size: larger;
 }
-
+  
 .contact-icon {
     cursor: default;
 }
-
+  
 .email-icon {
     height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+    height: 7vh;
+    margin: 0 1rem;
+}
+
+footer p {
+    text-align: center;
 }
